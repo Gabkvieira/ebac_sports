@@ -9,6 +9,7 @@ import api from '../services/api'
 export const store = configureStore({
   reducer: {
     carrinho: carrinhoReducer,
+    favoritar: favoritosReducer,
     [api.reducerPath]: api.reducer
   },
 

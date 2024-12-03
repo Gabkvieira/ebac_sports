@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Provider } from 'react-redux'
 import Header from './components/Header'
 import Produtos from './containers/Produtos'
@@ -15,14 +14,12 @@ export type Produto = {
 }
 
 function App() {
-  const [produtos] = useState<Produto[]>([])
-  const [favoritos] = useState<Produto[]>([])
   return (
     <Provider store={store}>
       <GlobalStyle />
       <div className="container">
         <Header />
-        <Produtos produtos={produtos} favoritos={favoritos} />
+        <Produtos />
       </div>
     </Provider>
   )

@@ -12,7 +12,7 @@ const Header = () => {
     (state: RootReducer) => state.carrinho.itens
   )
   const itensFavoritos = useSelector(
-    (state: RootReducer) => state.favoritos.itens
+    (state: RootReducer) => state.favoritar.itens
   )
 
   const valorTotal = itensCarrinho.reduce((acc, item) => {
