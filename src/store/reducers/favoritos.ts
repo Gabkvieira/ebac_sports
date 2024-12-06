@@ -18,7 +18,7 @@ const FavoritosSlice = createSlice({
       const produto = action.payload
 
       if (state.itens.find((p) => p.id === produto.id)) {
-        alert('Item já está nos favoritos')
+        state.itens = state.itens.filter((p) => p.id !== produto.id)
       } else {
         state.itens.push(produto)
       }
